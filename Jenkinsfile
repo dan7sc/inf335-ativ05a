@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/dan7sc/inf335-ativ04.git'
+                git branch: 'main', url: 'https://github.com/dan7sc/inf335-ativ04'
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
 
